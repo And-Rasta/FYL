@@ -1,0 +1,152 @@
+<body>
+
+
+
+    </nav>
+
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class=" center white-text text-lighten-2">Finesse Your Life</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light"></h5>
+                </div>
+                <div class="row center">
+                    <a href="#start" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get
+                        Started</a>
+                </div>
+                <br><br>
+
+            </div>
+        </div>
+        <div class="parallax"><img src="/assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+    </div>
+    <br><br>
+
+    </div>
+    {{!-- </div>
+    <div class="parallax"><img src="/assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
+    </div> --}}
+
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">“If you think you are too small to make a difference, try sleeping
+                        with a mosquito.”
+                        -- Dalai Lama</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="/assets/img/background1.jpg" alt="Unsplashed background img 2"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send white-text"></i></h3>
+                    <div class="centralized">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">Be Stronger Than Your Excuses -- FYL!</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="/assets/img/background3.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="section">
+            <div class="col s12 m4 colorMeCool">
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center white-text"><i class="material-icons">settings</i></h2>
+                            <h3 class="white-text center">Add a New Goal</h3>
+                            <h5 class="center white-text">If you could be anything, do anything, have anything, what would it be?</h5>
+                            <div class="add-form centralized">
+                                <div class="new-goal">
+                                    <form class="goal-form">
+
+                                        <input type="text" class="form-control white-text" id="goalName" placeholder="Your Vision Here...">
+                                        <label class="input-label" for="input1">
+
+                                        </label>
+                                        {{!-- <input type="text" class="form-control" id="todaysDate" placeholder="MM/DD/YYYY">
+                                        <label class="input-label" for="input2">
+                                            Today's Date.
+                                        </label> --}}
+                                        <button class="save-btn" type="submit">Add</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center white-text"><i class="material-icons">group</i></h2>
+                            <div class="current-goals center">
+
+                                <h3 class="white-text">Current Goals</h3>
+                                <h5 class="center white-text">Finish Strong - You've Got This!</h5>
+                                {{!-- <img src="/assets/img/cgoals.png" alt="bar chart Img" id="chartTwo"> --}}
+                                <div class="goal-body">
+                                    {{#each goals}}
+                                    {{#unless removed}}
+                                    {{> goals/goals-block remove=false}}
+                                    {{/unless}}
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <a name="start"></a>
+                            <h2 class="center white-text"><i class="material-icons">beenhere</i></h2>
+                            <!-- goals accomplished -->
+                            <div class="goals-accomplished">
+                                <h3 class="white-text center">Goals Accomplished</h3>
+                                <h5 class="center white-text">Done is Better Than Perfect</h5>
+                                {{!-- <img src="/assets/img/accgoals.png" alt="bar chart img" id="chartOne"> --}}
+                                <div class="goal-body">
+                                    {{#each goals}}
+                                    {{#if removed}}
+                                    {{> goals/goals-removed remove=true}}
+                                    {{/if}}
+                                    {{/each}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="/assets/js/materialize.js"></script>
+        <script src="/assets/js/init.js"></script>
+
+</body>
