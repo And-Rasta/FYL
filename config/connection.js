@@ -16,7 +16,7 @@ if (process.env.JAWSDB_URL) {
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "turkey@13",
+    password: "root",
     database: "finesse_db"
   });
 }
