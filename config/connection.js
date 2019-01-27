@@ -13,13 +13,13 @@ if (process.env.JAWSDB_URL) {
   //else use localhost database for local development.
   //MySQL password is passed into connection.js from the .env file using the dotenv npm package.
   var connection = mysql.createConnection({
-    host: "localhost",
+    host: process.env.MYSQL_HOST,
     port: 3306,
-    user: "root",
-    password: "root",
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_KEY,
     database: "finesse_db"
   });
-}
+}    
 
 connection.connect(function(err) {
   //If there is an error when connecting to the database, log the error to the console.
