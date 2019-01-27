@@ -1,5 +1,5 @@
 //Require mysql npm package to create a connection to the mysql database.
-var mysql = require("mysql");
+var mysql = require("mysql2");
 
 //Read and set any environment variables with the dotenv package.
 require("dotenv").config();
